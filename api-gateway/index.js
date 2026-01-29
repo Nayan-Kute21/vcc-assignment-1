@@ -2,8 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const app = express();
 
-const USER_SERVICE = process.env.USER_SERVICE || "http://localhost:5001";
-const PRODUCT_SERVICE = process.env.PRODUCT_SERVICE || "http://localhost:5002";
+const USER_SERVICE = process.env.USER_SERVICE || "http://192.168.56.11:5001";
+const PRODUCT_SERVICE = process.env.PRODUCT_SERVICE || "http://192.168.56.12:5002";
 
 app.get("/users", async (req, res) => {
   const response = await axios.get(`${USER_SERVICE}/users`);
